@@ -21,7 +21,7 @@ public class MoveCamera : MonoBehaviour {
     {
         if (canImove)
         {
-            Vector3 delta = Input.mousePosition - LastMousePosition;
+			Vector3 delta = LastMousePosition - Input.mousePosition;
             delta.y = 0;
             delta.z = 0;
             Camera.main.transform.position = CurrentCameraPosition + delta * 0.07f;
