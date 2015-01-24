@@ -2,7 +2,7 @@
 using System.Collections;
 
 [RequireComponent (typeof (CircleCollider2D))]
-public class PlanetBehaviour : MonoBehaviour {
+public class BlackHoleBehaviour : MonoBehaviour {
 
     public float mass;
     public float angle;

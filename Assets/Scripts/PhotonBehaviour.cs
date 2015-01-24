@@ -22,7 +22,7 @@ public class PhotonBehaviour : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("PlanetCore"))
+        if (other.CompareTag("Core"))
         {
             Debug.Log("Photon Crushed!");
             Time.timeScale = 0;
