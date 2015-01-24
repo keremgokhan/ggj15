@@ -8,6 +8,11 @@ TagManager:
   - Core
   - GravityShell
   - Earth
+  - btn_play
+  - btn_info
+  - btn_lvl1
+  - btn_lvl2
+  - btn_lvl3
   - 
   - PlanetCore
   - 
