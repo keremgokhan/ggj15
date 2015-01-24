@@ -27,5 +27,10 @@ public class PhotonBehaviour : MonoBehaviour {
             Debug.Log("Photon Crushed!");
             Time.timeScale = 0;
         }
+        else if (other.CompareTag("Earth"))
+        {
+            Debug.Log("Well Done!");
+            Time.timeScale = 0;
+        }
     }
 }

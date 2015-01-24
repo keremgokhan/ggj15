@@ -3,11 +3,13 @@
 --- !u!78 &1
 TagManager:
   tags:
-  - background
+<<<<<<< HEAD
   - Photon
   - PlanetCore
   - GravityShell
-  - Earth
+=======
+  - background
+>>>>>>> 2fd3081b6702b2c6f0feabfec15ff42802c3a17e
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
