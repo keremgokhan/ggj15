@@ -1,21 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent (typeof (CircleCollider2D))]
 public class PlanetBehaviour : MonoBehaviour {
 
     public float mass;
     public float angle;
     public float rotationSpeed;
 
+
+    private Transform ring;
+    private Transform body;
+
+    void Awake()
+    {
+        body = transform.GetChild(0).transform;
+        ring = transform.GetChild(1).transform;
+    }
+
     // Use this for initialization
     void Start()
     {
-        transform.GetChild(0).transform.localEulerAngles = new Vector3(0, 0, angle);
+        body.localEulerAngles = new Vector3(0, 0, angle);
+        ring.localScale *= transform.gameObject.GetComponent<CircleCollider2D>().radius;
     }
 
     void Update()
     {
-        transform.GetChild(0).Rotate(new Vector3(0, 1, 0), rotationSpeed * Time.deltaTime);
+        body.Rotate(new Vector3(0, 1, 0), rotationSpeed * Time.deltaTime);
+        ring.Rotate(new Vector3(0, 0, 1), 10 * Time.deltaTime);
+
     }
 
     void OnTriggerStay2D(Collider2D other)
