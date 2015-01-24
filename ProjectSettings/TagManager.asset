@@ -5,9 +5,11 @@ TagManager:
   tags:
   - background
   - Photon
-  - PlanetCore
+  - Core
   - GravityShell
   - Earth
+  - 
+  - PlanetCore
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

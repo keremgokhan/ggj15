@@ -27,7 +27,7 @@ public class BlackHoleBehaviour : MonoBehaviour {
 
     void Update()
     {
-        body.Rotate(new Vector3(0, 1, 0), rotationSpeed * Time.deltaTime);
+        //body.Rotate(new Vector3(0, 1, 0), rotationSpeed * Time.deltaTime);
         ring.Rotate(new Vector3(0, 0, 1), 10 * Time.deltaTime);
 
     }
