@@ -131,7 +131,7 @@ GameObject:
   - 58: {fileID: 195826069}
   m_Layer: 0
   m_Name: Core
-  m_TagString: Core
+  m_TagString: Earth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1554,6 +1554,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1aab13fb64e9e85459c202e1324d9f89, type: 2}
+    - target: {fileID: 100000, guid: 161e0be3aea798e4cb9012cd75aad81b, type: 2}
+      propertyPath: m_TagString
+      value: Earth
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 161e0be3aea798e4cb9012cd75aad81b, type: 2}
   m_RootGameObject: {fileID: 547188012}
