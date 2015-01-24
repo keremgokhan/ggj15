@@ -26,6 +26,15 @@ public class MainMenu : MonoBehaviour {
 					part1.SetActive(false);
 					part2.SetActive(true);
 				}
+				if (tag == "btn_lvl1") 
+				{
+					Vector3 temp = hit.transform.localScale;
+					temp.x *= 1.3f;
+					temp.y *= 1.3f;
+					hit.transform.localScale = temp;
+
+					Application.LoadLevel(1);
+				}
 			}
 		}
 	
