@@ -19,7 +19,8 @@ public class LeafBehaviour : MonoBehaviour {
 
 		if (aq.value >= 0.99f)
 		{
-			PlayerPrefs.SetInt("CurrentLevel", 3);
+			if (PlayerPrefs.GetInt("CurrentLevel", 1) < 3)
+				PlayerPrefs.SetInt("CurrentLevel", 3);
             Time.timeScale = 0;
             StartCoroutine(Fadeout());
 		}
