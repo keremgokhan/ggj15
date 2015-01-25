@@ -10,6 +10,9 @@ public class WaterBehaviour : MonoBehaviour {
 
     public float scaleReduction;
 
+    public Renderer fadeout;
+    public GameObject endPart;
+
     public Transform holes;
 
     void Update()
@@ -30,6 +33,47 @@ public class WaterBehaviour : MonoBehaviour {
 
         }
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+
+            if (hit.collider != null && hit.transform.CompareTag("btn_ok"))
+            {
+                string tag = hit.transform.tag;
+                Debug.Log("Target Position: " + hit.transform.tag);
+
+                Vector3 temp = hit.transform.localScale;
+                temp.x *= 1.3f;
+                temp.y *= 1.3f;
+                hit.transform.localScale = temp;
+
+
+            }
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+
+            if (hit.collider != null && hit.transform.CompareTag("btn_ok"))
+            {
+                string tag = hit.transform.tag;
+
+                Vector3 temp = hit.transform.localScale;
+                temp.x /= 1.3f;
+                temp.y /= 1.3f;
+                hit.transform.localScale = temp;
+
+                if (tag == "btn_ok")
+                {
+                    Time.timeScale = 1;
+                    Application.LoadLevel(0);
+                }
+
+            }
+        }
+
+
 		if (Input.GetKeyDown(KeyCode.Escape)) 
 		{
 			Time.timeScale = 1;
@@ -41,6 +85,17 @@ public class WaterBehaviour : MonoBehaviour {
     void End()
     {
         Time.timeScale = 1;
+    }
+
+    IEnumerator Fadeout()
+    {
+        while (fadeout.material.color.a < 0.85f)
+        {
+            fadeout.material.color += new Color(0, 0, 0, 0.02f);
+
+            yield return new WaitForEndOfFrame();
+        }
+        endPart.SetActive(true);
     }
 
     void OnTriggerEnter2D(Collider2D other)
