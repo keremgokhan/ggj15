@@ -6,6 +6,22 @@ public class MainMenu : MonoBehaviour {
 	public GameObject part1;
 	public GameObject part2;
 
+	public GameObject level2active;
+	public GameObject level3active;
+
+	void Awake () {
+		int level = PlayerPrefs.GetInt("CurrentLevel", 1);
+
+		if (level > 1) 
+		{
+			level2active.SetActive(true);
+		}
+		if (level == 3)
+		{
+			level3active.SetActive(true);
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 	
@@ -71,6 +87,11 @@ public class MainMenu : MonoBehaviour {
                     Application.LoadLevel(3);
                 }
 			}
+		}
+
+		if (Input.GetKeyDown(KeyCode.Escape)) 
+		{
+			Application.LoadLevel(0); 
 		}
 	
 	}

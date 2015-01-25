@@ -28,19 +28,33 @@ public class PhotonBehaviour : MonoBehaviour {
         Invoke("Finish", 1.2f);
     }
 
+	public void Hit2()
+	{
+		transform.collider2D.enabled = false;
+		velocity = new Vector2(0,0);
+		Invoke("Finish2", 1.2f);
+	}
+
     public void Finish()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 1;
+		Application.LoadLevel(0);
     }
+
+	public void Finish2()
+	{
+		Time.timeScale = 0;
+	}
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Core"))
         {
-            Hit();
+            Hit2();
         }
         else if (other.CompareTag("Earth"))
         {
+			PlayerPrefs.SetInt("CurrentLevel", 2);
             Hit();
         }
     }

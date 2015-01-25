@@ -30,6 +30,12 @@ public class WaterBehaviour : MonoBehaviour {
 
         }
 
+		if (Input.GetKeyDown(KeyCode.Escape)) 
+		{
+			Time.timeScale = 1;
+			Application.LoadLevel(0); 
+		}
+
     }
 
     void End()
@@ -41,7 +47,8 @@ public class WaterBehaviour : MonoBehaviour {
     {
         if (other.CompareTag("Exit"))
         {
-            Time.timeScale = 0;
+            Time.timeScale = 1;
+			Application.LoadLevel(0);
         }
         if (other.CompareTag("Hole"))
         {
