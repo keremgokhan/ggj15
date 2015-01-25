@@ -48,15 +48,15 @@ public class WaterBehaviour : MonoBehaviour {
             Debug.Log(other.name);
             if (other.name == "1")
             {
-                transform.position = holes.GetChild(2).transform.position + new Vector3(2,0,0);
+                transform.position = holes.GetChild(2).transform.position + new Vector3(1.5f,0,0);
             }
             if (other.name == "2")
             {
-                transform.position = holes.GetChild(1).transform.position + new Vector3(-2, 0, 0);
+                transform.position = holes.GetChild(0).transform.position + new Vector3(-1.5f, 0, 0);
             } 
             if (other.name == "3")
             {
-                transform.position = holes.GetChild(1).transform.position + new Vector3(-2, 0, 0);
+                transform.position = holes.GetChild(1).transform.position + new Vector3(-1.5f, 0, 0);
             }
         }
     }
