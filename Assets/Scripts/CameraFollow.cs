@@ -45,16 +45,10 @@ public class CameraFollow : MonoBehaviour {
 					temp.y *= 1.2f;
 					hit.transform.localScale = temp;
 
-
+					Time.timeScale = 1;
 					Application.LoadLevel(Application.loadedLevel);
 				}
 			}
-		}
-
-		if (Input.GetKeyDown(KeyCode.Escape)) 
-		{
-			Time.timeScale = 1;
-			Application.LoadLevel(0); 
 		}
 
 

@@ -74,6 +74,10 @@ public class MainMenu : MonoBehaviour {
 					part1.SetActive(false);
 					part2.SetActive(true);
 				}
+				if (tag == "btn_info") 
+				{
+					Application.LoadLevel(4);
+				}
 				if (tag == "btn_lvl1") 
 				{
 					Application.LoadLevel(1);
