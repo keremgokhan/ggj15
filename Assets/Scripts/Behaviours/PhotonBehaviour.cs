@@ -13,6 +13,14 @@ public class PhotonBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         transform.position += new Vector3(velocity.x, velocity.y, 0) * Time.deltaTime;
+
+		
+		
+		if (Input.GetKeyDown(KeyCode.Escape)) 
+		{
+			Time.timeScale = 1;
+			Application.LoadLevel(0); 
+		}
 	}
 
     public void ApplyForce(Vector2 force)
