@@ -30,6 +30,12 @@ public class WaterBehaviour : MonoBehaviour {
 
         }
 
+		if (Input.GetKeyDown(KeyCode.Escape)) 
+		{
+			Time.timeScale = 1;
+			Application.LoadLevel(0); 
+		}
+
     }
 
     void End()

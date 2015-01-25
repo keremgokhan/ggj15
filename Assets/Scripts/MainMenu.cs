@@ -88,6 +88,11 @@ public class MainMenu : MonoBehaviour {
                 }
 			}
 		}
+
+		if (Input.GetKeyDown(KeyCode.Escape)) 
+		{
+			Application.LoadLevel(0); 
+		}
 	
 	}
 }

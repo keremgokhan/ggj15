@@ -90,6 +90,11 @@ public class CO2Level : MonoBehaviour {
 				hit2.rigidbody.velocity = randomVelocity();
 			}*/
 		}
+
+		if (Input.GetKeyDown(KeyCode.Escape)) 
+		{
+			Application.LoadLevel(0); 
+		}
 	}
 
 	public Vector3 randomPosition()
