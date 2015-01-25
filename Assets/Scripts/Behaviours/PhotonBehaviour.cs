@@ -115,7 +115,8 @@ public class PhotonBehaviour : MonoBehaviour {
         }
         else if (other.CompareTag("Earth"))
         {
-			PlayerPrefs.SetInt("CurrentLevel", 2);
+			if (PlayerPrefs.GetInt("CurrentLevel", 1) < 2)
+				PlayerPrefs.SetInt("CurrentLevel", 2);
             Hit();
         }
     }
