@@ -84,7 +84,7 @@ public class WaterBehaviour : MonoBehaviour {
 
     void End()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 0;
     }
 
     IEnumerator Fadeout()
@@ -102,8 +102,9 @@ public class WaterBehaviour : MonoBehaviour {
     {
         if (other.CompareTag("Exit"))
         {
-            Time.timeScale = 1;
-			Application.LoadLevel(0);
+            Time.timeScale = 0;
+
+            StartCoroutine(Fadeout());
         }
         if (other.CompareTag("Hole"))
         {
