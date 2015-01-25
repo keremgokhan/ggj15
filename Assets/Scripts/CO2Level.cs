@@ -44,10 +44,12 @@ public class CO2Level : MonoBehaviour {
 				string tag = hit2.transform.tag;
 				Debug.Log ("Target Position: " + hit2.transform.tag);
 				
-				Vector3 temp = hit2.transform.localScale;
+				/*Vector3 temp = hit2.transform.localScale;
 				temp.x *= 1.2f;
 				temp.y *= 1.2f;
-				hit2.transform.localScale = temp;
+				hit2.transform.localScale = temp;*/
+				hit2.transform.position = randomPosition();
+				hit2.rigidbody.velocity = randomVelocity();
 			}
 		}
 
@@ -72,7 +74,7 @@ public class CO2Level : MonoBehaviour {
 				}
 			}
 
-			RaycastHit hit2;
+			/*RaycastHit hit2;
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast(ray, out hit2) && hit2.transform.tag != "Leaf")
 			{
@@ -86,7 +88,7 @@ public class CO2Level : MonoBehaviour {
 				
 				hit2.transform.position = randomPosition();
 				hit2.rigidbody.velocity = randomVelocity();
-			}
+			}*/
 		}
 	}
 

@@ -245,7 +245,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .5
+  m_Radius: .75
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &177065839
 MeshFilter:
@@ -333,6 +333,10 @@ Prefab:
     - target: {fileID: 444710, guid: 153d752624c8fa5448aead0f429fb7cf, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 13544710, guid: 153d752624c8fa5448aead0f429fb7cf, type: 2}
+      propertyPath: m_Radius
+      value: .75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 153d752624c8fa5448aead0f429fb7cf, type: 2}
@@ -743,7 +747,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .5
+  m_Radius: .75
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &755086351
 MeshFilter:
@@ -1321,7 +1325,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .5
+  m_Radius: .75
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1511531515
 MeshFilter:
@@ -1409,6 +1413,10 @@ Prefab:
     - target: {fileID: 408698, guid: b7ee1c7d5e5cecd4bb8aeadf7420a227, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 13508698, guid: b7ee1c7d5e5cecd4bb8aeadf7420a227, type: 2}
+      propertyPath: m_Radius
+      value: .75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7ee1c7d5e5cecd4bb8aeadf7420a227, type: 2}
@@ -1590,6 +1598,10 @@ Prefab:
     - target: {fileID: 473680, guid: 8371c8203fef89844bf4c6d02380301b, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13573680, guid: 8371c8203fef89844bf4c6d02380301b, type: 2}
+      propertyPath: m_Radius
+      value: .75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8371c8203fef89844bf4c6d02380301b, type: 2}

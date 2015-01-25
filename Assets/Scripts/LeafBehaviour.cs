@@ -16,6 +16,7 @@ public class LeafBehaviour : MonoBehaviour {
 
 		if (aq.value >= 0.99f)
 		{
+			PlayerPrefs.SetInt("CurrentLevel", 3);
 			Application.LoadLevel(0);
 		}
 
