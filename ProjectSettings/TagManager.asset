@@ -15,6 +15,10 @@ TagManager:
   - btn_lvl3
   - 
   - PlanetCore
+  - O2
+  - CO2
+  - Nitro
+  - Leaf
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
