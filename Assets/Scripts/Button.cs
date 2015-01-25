@@ -22,6 +22,7 @@ public class Button : MonoBehaviour {
     {
         if (!isStarted)
         {
+            Camera.main.GetComponent<CameraFollow>().enabled = true;
             photon.GetComponent<PhotonBehaviour>().velocity = new Vector2(8, 0);
             isStarted = true;
 			transform.GetComponent<SpriteRenderer>().sprite = restartSprite;
