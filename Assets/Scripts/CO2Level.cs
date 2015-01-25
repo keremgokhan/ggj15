@@ -72,6 +72,11 @@ public class CO2Level : MonoBehaviour {
 					overlay.SetActive(false);
 					StartTheLevel();
 				}
+                if (tag == "btn_ok")
+                {
+                    Time.timeScale = 1;
+                    Application.LoadLevel(0);
+                }
 			}
 
 			/*RaycastHit hit2;

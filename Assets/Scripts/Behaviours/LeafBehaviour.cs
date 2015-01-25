@@ -6,6 +6,9 @@ public class LeafBehaviour : MonoBehaviour {
 
 	public Slider aq;
 
+    public Renderer fadeout;
+    public GameObject endPart;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -17,11 +20,23 @@ public class LeafBehaviour : MonoBehaviour {
 		if (aq.value >= 0.99f)
 		{
 			PlayerPrefs.SetInt("CurrentLevel", 3);
-			Application.LoadLevel(0);
+            Time.timeScale = 0;
+            StartCoroutine(Fadeout());
 		}
 
 		aq.value -= 0.001f * Time.deltaTime * 60;
 	}
+
+    IEnumerator Fadeout()
+    {
+        while (fadeout.material.color.a < 0.85f)
+        {
+            fadeout.material.color += new Color(0, 0, 0, 0.02f);
+
+            yield return new WaitForEndOfFrame();
+        }
+        endPart.SetActive(true);
+    }
 
 	void OnTriggerEnter (Collider col)
 	{
