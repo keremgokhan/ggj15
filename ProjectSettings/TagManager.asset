@@ -17,6 +17,10 @@ TagManager:
   - PlanetCore
   - Exit
   - Hole
+  - O2
+  - CO2
+  - Nitro
+  - Leaf
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
