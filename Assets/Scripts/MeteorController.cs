@@ -2,6 +2,10 @@
 using System.Collections;
 
 public class MeteorController : MonoBehaviour {
+
+    public Transform blackhole;
+    
+    
     public float scalefactor = 1.3f;
     private float x;
     private float y;
@@ -19,27 +23,30 @@ public class MeteorController : MonoBehaviour {
     void OnMouseDown()
     {
         this.transform.parent = null;
-        Vector3 temp = this.transform.localScale;
-        temp.x *= scalefactor;
-        temp.y *= scalefactor;
+        transform.position += new Vector3(0, 30, 0);
 
-        this.transform.localScale = temp;
+        //Vector3 temp = this.transform.localScale;
+        //temp.x *= scalefactor;
+        //temp.y *= scalefactor;
+
+        //this.transform.localScale = temp;
         GameObject.FindGameObjectWithTag("background").GetComponent<MoveCamera>().canImove = false;
     }
 
     void OnMouseUp()
     {
-        Vector3 temp = this.transform.localScale;
-        temp.x /= scalefactor;
-        temp.y /= scalefactor;
+        //Vector3 temp = this.transform.localScale;
+        //temp.x /= scalefactor;
+        //temp.y /= scalefactor;
 
-        this.transform.localScale = temp;
+        //this.transform.localScale = temp;
         GameObject.FindGameObjectWithTag("background").GetComponent<MoveCamera>().canImove = true;
     }
 
     void OnMouseDrag()
     {
-        this.transform.position= Camera.main.ScreenToWorldPoint(new Vector3(x,y,10.0f) );
+        //this.transform.position= Camera.main.ScreenToWorldPoint(new Vector3(x,y,10.0f) );
+        blackhole.position = Camera.main.ScreenToWorldPoint(new Vector3(x, y, 40));
       
     }
 }

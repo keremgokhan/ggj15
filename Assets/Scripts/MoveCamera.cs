@@ -21,11 +21,24 @@ public class MoveCamera : MonoBehaviour {
     {
         if (canImove)
         {
+
 			Vector3 delta = LastMousePosition - Input.mousePosition;
             delta.y = 0;
             delta.z = 0;
             Camera.main.transform.position = CurrentCameraPosition + delta * 0.07f;
+            LastMousePosition = Input.mousePosition;
+            CurrentCameraPosition = Camera.main.transform.position;
+            if (CurrentCameraPosition.x < -2f)
+            {
+                Camera.main.transform.position = new Vector3(-2.0f, Camera.main.transform.position.y, Camera.main.transform.position.z);
+            }
+            else if (CurrentCameraPosition.x > 8f)
+            {
+                Camera.main.transform.position = new Vector3(8.0f, Camera.main.transform.position.y, Camera.main.transform.position.z);
+            }
+            
         }
+
     }
 
     void OnMouseDown()

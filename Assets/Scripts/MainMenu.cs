@@ -62,6 +62,10 @@ public class MainMenu : MonoBehaviour {
 				{
 					Application.LoadLevel(1);
 				}
+                if (tag == "btn_lvl3")
+                {
+                    Application.LoadLevel(2);
+                }
 			}
 		}
 	

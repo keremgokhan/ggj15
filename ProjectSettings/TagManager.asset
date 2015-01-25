@@ -15,6 +15,8 @@ TagManager:
   - btn_lvl3
   - 
   - PlanetCore
+  - Exit
+  - Hole
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

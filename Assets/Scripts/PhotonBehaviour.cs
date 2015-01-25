@@ -20,17 +20,28 @@ public class PhotonBehaviour : MonoBehaviour {
         velocity += force;
     }
 
+
+    public void Hit()
+    {
+        transform.collider2D.enabled = false;
+        velocity = new Vector2(0,0);
+        Invoke("Finish", 1.2f);
+    }
+
+    public void Finish()
+    {
+        Time.timeScale = 0;
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Core"))
         {
-            Debug.Log("Photon Crushed!");
-            Time.timeScale = 0;
+            Hit();
         }
         else if (other.CompareTag("Earth"))
         {
-            Debug.Log("Well Done!");
-            Time.timeScale = 0;
+            Hit();
         }
     }
 }
